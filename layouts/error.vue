@@ -1,7 +1,11 @@
-<template><h1>HUI</h1></template>
+<template>
+    <div></div>
+</template>
 
-<script lang="ts">
+<script>
 import { defineComponent } from '@nuxtjs/composition-api'
 
 export default defineComponent({})
 </script>
+
+<style scoped></style>
