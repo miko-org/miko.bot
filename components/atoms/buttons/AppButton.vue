@@ -1,5 +1,5 @@
 <template>
-    <Component v-bind="buttonProps" :is="is" :class="buttonClass ? buttonClass : ['app-button', extraClass, size]">
+    <Component v-bind="buttonProps" :class="buttonClass ? buttonClass : ['app-button', extraClass, size]">
         <Component :is="icon" v-if="icon" class="mr-2 icon" :class="size" />
 
         <!--        <Markdown unwrap="p" />-->
@@ -14,8 +14,12 @@
 
 <script lang="ts">
 import { computed, defineComponent } from '@nuxtjs/composition-api'
+import AppLink from '~/components/atoms/links/AppLink.vue'
 
 export default defineComponent({
+    components: {
+        AppLink
+    },
     props: {
         to: {
             type: String,

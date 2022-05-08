@@ -1,7 +1,7 @@
 <template>
-    <div class="relative w-full">
+    <div class="w-full relative">
         <AppHeader :links="headerLinks" />
-        <Nuxt />
+        <Nuxt class="container" />
         <AppFooter :links="footerLinks" />
 
         <CookieBanner
@@ -22,7 +22,12 @@ export default defineComponent({
     components: { AppFooter, AppHeader, CookieBanner },
     data() {
         return {
-            headerLinks: [],
+            headerLinks: [
+                { name: 'Home', path: '/', icon: '' },
+                { name: 'Documentation', path: '/documentation', icon: '' },
+                { name: 'Community', path: '/community', icon: '' },
+                { name: 'Premium', path: '/premium', icon: 'IconFire' }
+            ],
             footerLinks: [],
             showCookieBanner: false
         }
@@ -35,3 +40,10 @@ export default defineComponent({
     }
 })
 </script>
+
+<style lang="postcss">
+.container {
+    @apply relative m-auto;
+    width: 79%;
+}
+</style>
