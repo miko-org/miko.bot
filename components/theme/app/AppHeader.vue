@@ -52,7 +52,7 @@ export default defineComponent({
 
 <style lang="postcss">
 .header {
-    @apply flex items-center sticky top-0 h-[var(--header-height)] max-w-7xl lg:px-38 mx-auto;
+    @apply flex items-center sticky top-0 h-[var(--header-height)] max-w-7xl lg:px-18 mx-auto;
 
     &__logo {
         @apply flex flex-1 justify-start;
