@@ -25,7 +25,7 @@ export default {
             class: ['min-w-xs']
         }
     }, // Global CSS: https://go.nuxtjs.dev/config-css
-    css: ['virtual:windi.css', 'virtual:windi-devtools'],
+    css: ['virtual:windi.css', 'virtual:windi-devtools', '~/assets/main.css'],
 
     // Auto import components: https://go.nuxtjs.dev/config-components
     components: true,

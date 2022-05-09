@@ -13,19 +13,18 @@ export default defineConfig({
             transparent: 'transparent',
             current: 'currentColor',
             primary: {
-                50: '#F2FDF9',
-                100: '#E6FCF3',
-                200: '#BFF6E0',
-                300: '#99F1CD',
+                50: '#F5F9FF',
+                100: '#EBF3FE',
+                200: '#CEE0FD',
+                300: '#B1CDFB',
                 400: '#76A8F9',
                 500: '#3B82F6',
                 DEFAULT: '#3B82F6',
-                600: '#00C675',
-                700: '#00844E',
-                800: '#00633B',
-                900: '#004227'
+                600: '#3575DD',
+                700: '#2C62B9',
+                800: '#234E94',
+                900: '#1D4079'
             },
-            // TODO: change colors.primary
             'secondary-surface': '#E5F9FF',
             'secondary-lightest': '#B7E1ED',
             'secondary-lighter': '#95CDDE',

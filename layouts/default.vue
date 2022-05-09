@@ -1,7 +1,7 @@
 <template>
     <div class="w-full relative">
         <AppHeader :links="headerLinks" />
-        <Nuxt class="container" />
+        <Nuxt />
         <AppFooter :links="footerLinks" />
 
         <CookieBanner
@@ -40,10 +40,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style lang="postcss">
-.container {
-    @apply relative m-auto;
-    width: 79%;
-}
-</style>

@@ -4,11 +4,7 @@ export function useNav() {
     const route = useRoute()
 
     const isHome = computed(() => {
-        let path = route.value.path
-
-        if (!path.endsWith('/')) {
-            path += '/'
-        }
+        const path = route.value.path
 
         return path === '/'
     })

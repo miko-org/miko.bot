@@ -1,8 +1,9 @@
 <template>
     <header class="header">
-        <AppLink to="/">
+        <AppLink to="/" class="header__logo">
             <Logo />
         </AppLink>
+
         <nav class="header__nav">
             <HeaderNavLink
                 v-for="(link, index) in links"
@@ -11,7 +12,10 @@
                 :class="{ active: link.path === currentPath }"
             />
         </nav>
-        <AppButton to="/login">Log In</AppButton>
+
+        <div class="header__button-wrapper">
+            <AppButton to="/login">Log In</AppButton>
+        </div>
     </header>
 </template>
 
@@ -37,7 +41,7 @@ export default defineComponent({
         }
     },
     setup() {
-        const currentPath = useNav().currentPath
+        const { currentPath } = useNav()
 
         return {
             currentPath
@@ -47,26 +51,31 @@ export default defineComponent({
 </script>
 
 <style lang="postcss">
-@import '~/assets/main.css';
-
 .header {
-    @apply flex items-center justify-between sticky top-0;
-    height: var(--header-height);
-}
+    @apply flex items-center sticky top-0 h-[var(--header-height)] max-w-7xl lg:px-38 mx-auto;
 
-.header__nav {
-    @apply grid grid-flow-col gap-12;
+    &__logo {
+        @apply flex flex-1 justify-start;
+    }
+
+    &__nav {
+        @apply flex items-center gap-12;
+    }
+
+    &__button-wrapper {
+        @apply flex flex-1 justify-end;
+    }
+
+    &__link_with-icon.active {
+        @apply text-orange-500;
+    }
 }
 
 .active {
     @apply text-gray-900;
-}
 
-.header__link_with-icon.active {
-    @apply text-orange-500;
-}
-
-.active .icon path {
-    @apply fill-orange-500;
+    .header__icon path {
+        @apply fill-orange-500;
+    }
 }
 </style>
