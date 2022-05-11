@@ -1,20 +1,22 @@
 <template>
-    <header class="header">
-        <AppLink to="/" class="header__logo" aria-label="homeLink">
-            <Logo />
-        </AppLink>
+    <header class="header-wrapper">
+        <div class="header">
+            <AppLink to="/" class="header__logo" aria-label="homeLink">
+                <Logo />
+            </AppLink>
 
-        <nav class="header__nav">
-            <HeaderNavLink
-                v-for="(link, index) in links"
-                :key="index"
-                v-bind="link"
-                :class="{ active: link.path === currentPath }"
-            />
-        </nav>
+            <nav class="header__nav">
+                <HeaderNavLink
+                    v-for="(link, index) in links"
+                    :key="index"
+                    v-bind="link"
+                    :class="{ active: link.path === currentPath }"
+                />
+            </nav>
 
-        <div class="header__button-wrapper">
-            <AppButton to="/login">Log In</AppButton>
+            <div class="header__button-wrapper">
+                <AppButton to="/login">Log In</AppButton>
+            </div>
         </div>
     </header>
 </template>
@@ -52,7 +54,11 @@ export default defineComponent({
 
 <style lang="postcss">
 .header {
-    @apply flex items-center sticky top-0 h-[var(--header-height)] max-w-7xl lg:px-17.5 mx-auto;
+    &-wrapper {
+        @apply bg-opacity-80 backdrop-blur-md backdrop-filter sticky top-0;
+    }
+
+    @apply flex items-center h-[var(--header-height)] max-w-7xl mx-auto lg:px-10;
 
     &__logo {
         @apply flex flex-1 justify-start;
