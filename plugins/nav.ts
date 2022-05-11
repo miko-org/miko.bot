@@ -9,9 +9,7 @@ export function useNav() {
         return path === '/'
     })
 
-    const currentPath = computed(() => {
-        return route.value.path
-    })
+    const currentPath = computed(() => route.value.path)
 
     return { isHome, currentPath }
 }
