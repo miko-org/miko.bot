@@ -55,7 +55,7 @@ export default defineComponent({
 <style lang="postcss">
 .header {
     &-wrapper {
-        @apply bg-opacity-80 backdrop-blur-md backdrop-filter sticky top-0;
+        @apply bg-opacity-80 backdrop-blur-md backdrop-filter sticky top-0 bg-transparent bg-white;
     }
 
     @apply flex items-center h-[var(--header-height)] max-w-7xl mx-auto lg:px-10;
