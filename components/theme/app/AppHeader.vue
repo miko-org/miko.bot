@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <AppLink to="/" class="header__logo">
+        <AppLink to="/" class="header__logo" aria-label="homeLink">
             <Logo />
         </AppLink>
 
@@ -52,7 +52,7 @@ export default defineComponent({
 
 <style lang="postcss">
 .header {
-    @apply flex items-center sticky top-0 h-[var(--header-height)] max-w-7xl lg:px-18 mx-auto;
+    @apply flex items-center sticky top-0 h-[var(--header-height)] max-w-7xl lg:px-17.5 mx-auto;
 
     &__logo {
         @apply flex flex-1 justify-start;
