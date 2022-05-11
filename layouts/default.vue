@@ -1,5 +1,5 @@
 <template>
-    <div class="relative w-full">
+    <div class="w-full relative">
         <AppHeader :links="headerLinks" />
         <Nuxt />
         <AppFooter :links="footerLinks" />
@@ -22,7 +22,12 @@ export default defineComponent({
     components: { AppFooter, AppHeader, CookieBanner },
     data() {
         return {
-            headerLinks: [],
+            headerLinks: [
+                { name: 'Home', path: '/', icon: '' },
+                { name: 'Documentation', path: '/documentation', icon: '' },
+                { name: 'Community', path: '/community', icon: '' },
+                { name: 'Premium', path: '/premium', icon: 'IconFire' }
+            ],
             footerLinks: [],
             showCookieBanner: false
         }
