@@ -45,7 +45,7 @@
         "lint-staged": "^12.4.3",
         "nuxt-vite": "^0.3.5",
         "nuxt-windicss": "^2",
-        "postcss-preset-env": "^7.6.0",
+        "postcss-preset-env": "^7.7.0",
         "prettier": "^2.5.1"
     }
 }
