@@ -1,6 +1,6 @@
 <template>
     <Component v-bind="buttonProps" :class="buttonClass ? buttonClass : ['app-button', extraClass, size]">
-        <Component :is="icon" v-if="icon" class="mr-2 icon" :class="size" />
+        <Component :is="icon" v-if="icon" class="mr-2" :class="size" />
 
         <!--        <Markdown unwrap="p" />-->
 
@@ -14,11 +14,13 @@
 
 <script lang="ts">
 import { computed, defineComponent } from '@nuxtjs/composition-api'
+import IconStar from '~/components/atoms/icons/IconStar.vue'
 import AppLink from '~/components/atoms/links/AppLink.vue'
 
 export default defineComponent({
     components: {
-        AppLink
+        AppLink,
+        IconStar
     },
     props: {
         to: {
@@ -60,7 +62,7 @@ export default defineComponent({
                 }
             } else if (href?.length) {
                 return {
-                    is: 'AppLink',
+                    is: 'a',
                     href
                 }
             } else {
@@ -86,14 +88,6 @@ export default defineComponent({
 
     & .large {
         @apply text-base leading-6;
-    }
-}
-
-.icon {
-    @apply w-4 h-4;
-
-    & .large {
-        @apply w-5 h-5;
     }
 }
 </style>
